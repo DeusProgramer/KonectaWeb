@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
 import "./style/FirstPageStyle.css";
 import logoOne from "../img/logoOne.png";
 import KonectaCompany from "../img/KonectaCompany.png";

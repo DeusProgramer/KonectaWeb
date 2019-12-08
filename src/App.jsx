@@ -5,14 +5,13 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<FirstPage />} />
-    //     <Route path="/Login" element={<PagLogin />} />
-    //     <Route path="/Cliente" element={<PagCliente />} />
-    //   </Routes>
-    // </Router>
-    <PagCliente/>
+    <Router>
+      <Routes>
+        <Route path="/" element={<FirstPage />} />
+        <Route path="/Login" element={<PagLogin />} />
+        <Route path="/Cliente" element={<PagCliente />} />
+      </Routes>
+    </Router>
   );
 }
 

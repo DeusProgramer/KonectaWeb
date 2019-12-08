@@ -2,10 +2,13 @@ import React from "react";
 import { useState } from "react";
 import "./style/PagLogin.css";
 import KonectaCompany from "../img/KonectaCompany.png";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function PagLogin() {
   const [valorUsuario, setValorUsuario] = useState("");
   const [valorPassword, setValorPassword] = useState("");
+
+  const navv = useNavigate()
 
   const getValorUsuario = (event) => {
     setValorUsuario(event.target.value);
@@ -14,20 +17,6 @@ function PagLogin() {
   const getValorPassword = (event) => {
     setValorPassword(event.target.value);
   };
-
-  const getApi = () => {
-    fetch("http://127.0.0.1:5002/result")
-      .then((response) => response.json())
-      .then((data) => {
-        // console.log('Valor recibido de la API:', data.valor);
-        var datoRecibido = data.valor;
-        console.log("valor es :", datoRecibido);
-      })
-      .catch((error) => {
-        console.error("Error al obtener el valor:", error);
-      });
-  };
-
   // const setApi = () => {
   //   fetch("http://127.0.0.1:5002/enviar", {
   //     method: 'POST',
@@ -55,7 +44,7 @@ function PagLogin() {
       .then((data) => {
         var resultado = data.trueOrFalse;
         if (resultado === true){
-          alert("Acceso a la pagina autorizado");
+          navv("/Cliente","option")
         }
         else{
           alert("Acceso a la pagina no autorizado");
@@ -92,7 +81,7 @@ function PagLogin() {
           value={valorPassword}
           onChange={getValorPassword}
         />
-        <button id="botonIngresar" onClick={accionBoton}>
+        <button id="botonIngresar" onClick={accionBoton} Link="/Cliente">
           Ingresar
         </button>
         <a href="" id="linkContrasena">

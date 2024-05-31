@@ -1,55 +1,104 @@
 #body {
-  background-color: #0b203f;
+  background-color: #040f1a;
   background-image: url("./img/backgroundPageOne.jpg");
   background-attachment: local;
   background-position: center;
+  background-position-x: 150px ;
   background-repeat: no-repeat;
-  height: 100%;
-  background-position-y: 36.5px;
+  height: 1000%;
+  background-position-y: -50px;
   display: block;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #encabezado {
-  background-color: rgba(172, 180, 180, 0.2);
-  backdrop-filter: blur(15px);
+  padding-top:15px ;
   text-align: start;
   height: 11vh;
 }
 #logo {
-  height: 55px;
+  height: 45px;
   margin-left: 10px;
-  margin-top: 5px;
+  margin-top: 15px;
   display: inline-block;
 }
 #tituloE {
-  margin-top: -55px;
-  margin-left: 70px;
-  font-size: xx-large;
+  margin-top: -45px;
+  margin-left: 55px;
+  font-size: x-large;
 }
 #contenedorEnlaces {
-  margin-top: -70px;
+  margin-top: -50px;
   margin-left: 350px;
 }
 .enlaces {
   margin-left: 100px;
-  font-size: x-large;
+  font-size: large;
   color: aliceblue;
+  font-family: verdana;
 }
 .enlaces:hover {
   color: aqua;
   border-bottom: 2px solid aqua;
 }
-#primerElemento {
-  margin: 5%;
+#primerElemento
+{
   display: inline-block;
+  padding: 10vh;
+  margin-top:7.5vh;
   text-align: left;
-  padding: 15px;
-  background-color: rgba(8, 19, 20, 0.555);
-  backdrop-filter: blur(5px);
-  width:22% ;
-  border-radius: 15px;
 }
-#piedepagina {
+.parrafoIni
+{
+  width: 45%;
+  font-size: small;
+  color: #A6C2DD  ;
+}
+.botones
+{
+  margin-right: 15px;
+}
+#segundoElemento
+{
+  position: relative;
+  display: flex;
+  margin-top:90px;
+  padding-top: 2.5%;
+  padding-bottom: 250px;
+  background-color: rgba(1, 8, 14, 0.753);
+  backdrop-filter: blur(15px);
+  justify-content:center;
+  align-items: center;
+  
+}
+#companyLogo
+{
+  padding-top: 2%;
+  height: 100px;
+}
+#tituloIA
+{
+  padding-top: 2%;
+  padding-left: 20px;
+  color: #26beaa;
+  font-size: 50px;
+}
+#tituloIA2
+{
+  position: absolute;
+  top: 160px;
+}
+#textoIa
+{
+  position: absolute;
+  top: 210px;
+  text-align: center;
+  padding-left: 200px;
+  padding-right: 200px;
+  font-size: small;
+  color: #A6C2DD 
+}
+#piedepagina 
+{
   background: linear-gradient(#0e1522, #01080e);
   border-top: 2px solid rgba(240, 248, 255, 0.2);
   height: 40vh;
@@ -75,27 +124,5 @@
   color: #26beaa;
   box-shadow: #33f1d8;
 }
-#segundoElemento
-{
-  display: flex;
-  text-align: left;
-  flex-direction: row;
-  margin:5%;
-  padding: 15px;
-  background-color: rgba(12, 18, 19, 0.555);
-  backdrop-filter: blur(5px);
-  margin-left: 100vh;
-  width:fit-content;
-  margin-top: -75vh ;
-  margin-bottom: 50vh;
-  border-radius: 15px;
-}
-#company
-{
-  height: 125px;
-  display:grid;
-}
-#plusIA
-{
-  font-size: 500%;
-}
+
+

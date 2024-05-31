@@ -1,7 +1,7 @@
 import React from "react";
 import "./style/FirstPageStyle.css";
 import logoOne from "./style/img/logoOne.png";
-import KonectaCompanyLogo from "./style/img/KonectaCompanyLogo.png";
+import KonectaCompany from "./style/img/KonectaCompany.png";
 
 function FirstPage() {
   return (
@@ -25,33 +25,58 @@ function FirstPage() {
       {/* -------------------------- */}
       <div id="primerElemento">
         <h2>Facilitamos tu búsqueda, ampliamos tus posibilidades</h2>
-        <p>
-          Bienvenido a Konecta. Somos una nueva empresa dedicada a conectar
-          personas con oportunidades laborales mediante innovadoras soluciones
-          digitales. Nacemos con la visión de revolucionar el mercado de
-          reclutamiento a través de un sistema que permita encontrar talento y
-          vacantes de manera ágil, eficaz y transparente. Queremos simplificar
-          el proceso de contratación y que tanto empresas como candidatos tengan
-          una experiencia satisfactoria. Para ello, estamos desarrollando una
-          plataforma online rapida e intuitiva para usuarios y empresas.
+        <p className="parrafoIni">
+          En Konecta, nos dedicamos a transformar la manera en que las empresas
+          manejan el proceso de contratación. Nuestra plataforma web está
+          diseñada para ofrecer una solución integral que permite publicar
+          vacantes y gestionar candidatos.
+        </p>
+        <h4>Encuentra Tu Próxima Oportunidad con Konecta </h4>
+        <p className="parrafoIni">
+          facilitamos tu búsqueda de empleo conectándote con las mejores
+          oportunidades en empresas líderes. Nuestra plataforma intuitiva te
+          permite crear y enviar tu currículum de manera rápida y sencilla.
+        </p>
+        <button className="botones">Buscar Empleo</button>
+        <button className="botones">Gestion de Empleos</button>
+      </div>
+      <div id="segundoElemento">
+        <img src={KonectaCompany} id="companyLogo" />
+        <h1 id="tituloIA"> + IA </h1>
+        <h2 id="tituloIA2">
+          Potencia tu Contratación con Inteligencia Artificial
+        </h2>
+        <p id="textoIa">
+          llevamos la selección de personal al siguiente nivel mediante el uso
+          de inteligencia artificial avanzada. Nuestra IA analiza de manera
+          eficiente cada solicitud de empleo, identificando a los candidatos más
+          adecuados según los criterios específicos de tu empresa. Este proceso
+          no solo ahorra tiempo y reduce el esfuerzo manual, sino que también
+          aumenta la precisión en la selección, asegurando que siempre
+          encuentres al mejor talento disponible. Con Konecta, transforma tu
+          proceso de contratación en una experiencia rápida, inteligente y
+          altamente efectiva.
         </p>
       </div>
-      <div id = "segundoElemento">
-        <img src={KonectaCompanyLogo} id = "company" />
-        <h1 id="plusIA">+ IA</h1>
-
-      </div>
       {/* -------------------------- */}
-      <footer id = "piedepagina">
+      <footer id="piedepagina">
         <div>
-          <h5 id = "h5">
-            Contactos
-          </h5>
-          <a className= "enlacesF"href="">konectaCompany@gmail.com</a>
-          <a className= "enlacesF"href="">WhattApp</a>
-          <a className= "enlacesF"href="">Instagram</a>
-          <a className= "enlacesF"href="">Twitter</a>
-          <a className= "enlacesF"href="">GitHub</a>
+          <h5 id="h5">Contactos</h5>
+          <a className="enlacesF" href="">
+            konectaCompany@gmail.com
+          </a>
+          <a className="enlacesF" href="">
+            WhattApp
+          </a>
+          <a className="enlacesF" href="">
+            Instagram
+          </a>
+          <a className="enlacesF" href="">
+            Twitter
+          </a>
+          <a className="enlacesF" href="">
+            GitHub
+          </a>
         </div>
       </footer>
     </div>

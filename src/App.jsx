@@ -1,11 +1,10 @@
-import FirstPage from "./components/FirstPage";
+import FirstPage from "./components/paginaInicio/FirstPage";
+import PagLogin from "./components/paginaLogin/PagLogin";
 
 function App() {
-  return (
-    <div>
-      <FirstPage/>
-    </div>
-  );
+  return <div>
+    <PagLogin/>
+  </div>;
 }
 
 export default App;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style/FirstPageStyle.css";
-import logoOne from "./style/img/logoOne.png";
-import KonectaCompany from "./style/img/KonectaCompany.png";
+import logoOne from "../img/logoOne.png";
+import KonectaCompany from "../img/KonectaCompany.png";
 
 function FirstPage() {
   return (
@@ -77,6 +77,10 @@ function FirstPage() {
           <a className="enlacesF" href="">
             GitHub
           </a>
+          <img
+            src={KonectaCompany}
+            style={{ width: "85px", paddingLeft: "1%" }}
+          />
         </div>
       </footer>
     </div>

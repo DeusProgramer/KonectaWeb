@@ -1,6 +1,6 @@
 #body {
   background-color: #040f1a;
-  background-image: url("./img/backgroundPageOne.jpg");
+  background-image: url("./backgroundPageOne.jpg");
   background-attachment: local;
   background-position: center;
   background-position-x: 150px ;
@@ -68,7 +68,6 @@
   backdrop-filter: blur(15px);
   justify-content:center;
   align-items: center;
-  
 }
 #companyLogo
 {
@@ -101,7 +100,7 @@
 {
   background: linear-gradient(#0e1522, #01080e);
   border-top: 2px solid rgba(240, 248, 255, 0.2);
-  height: 40vh;
+  height: 40%;
 }
 #h5
 {

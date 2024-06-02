@@ -1,0 +1,114 @@
+#bodyLogin {
+  background-color: rgb(17, 166, 235);
+  background-image: url("./backgroundLoginUser.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 206.5vh;
+  height: 100vh;
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+#logo
+{
+    position: relative;
+    width: 100%;
+    top: -290px;
+    left: -370px;
+}
+
+#cajaUsuario {
+  background-color: rgba(4, 67, 67, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  border: 2px solid rgb(205, 216, 215);
+  color: red;
+  padding: 1%;
+  width: 500px;
+  height: 50%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: -10%;
+}
+
+#primerTitulo {
+  color: aliceblue;
+  font-size: 200%;
+  display: block;
+}
+
+#linea {
+  width: 500px;
+  border: 1px solid aliceblue;
+}
+
+#cajaTextUser {
+  background: transparent;
+  border: 0.1px solid aliceblue;
+  border-radius: 15px;
+  color: aliceblue;
+  text-align: center;
+  width: 250px;
+  height: 25px;
+  font-size: large;
+  flex-direction: column;
+  position: relative;
+  top: 20px;
+}
+
+#cajaTextPass {
+  background: transparent;
+  border: transparent;
+  border: 1px solid aliceblue;
+  border-radius: 15px;
+  color: aliceblue;
+  text-align: center;
+  width: 250px;
+  height: 25px;
+  font-size: large;
+  position: relative;
+  top: 40px;
+}
+
+#botonIngresar {
+  width: 250px;
+  height: 35px;
+  border: transparent;
+  border-radius: 15px;
+  font-family: sans-serif;
+  position: relative;
+  top: 60px;
+}
+
+#botonIngresar:hover {
+  color: darkblue;
+  background-color: aqua;
+}
+
+#linkContrasena {
+  font-size: smaller;
+  text-decoration: none;
+  color: aliceblue;
+  display: block;
+  position: relative;
+  top: 70px;
+}
+
+#linkContrasena:hover {
+  color: aqua;
+}
+
+#linkRegistro {
+  font-size: smaller;
+  text-decoration: none;
+  color: aliceblue;
+  display: block;
+  position: relative;
+  top: 75px;
+}
+
+#linkRegistro:hover {
+  color: aqua;
+}

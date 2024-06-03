@@ -10,11 +10,11 @@
   justify-content: center;
   align-items: center;
 }
-#logo
+#logoCompany
 {
     position: relative;
-    width: 100%;
-    top: -290px;
+    width: 150px;
+    top: -280px;
     left: -370px;
 }
 

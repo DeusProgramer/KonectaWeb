@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import "./style/FirstPageStyle.css";
 import logoOne from "../img/logoOne.png";
 import KonectaCompany from "../img/KonectaCompany.png";
@@ -8,7 +9,7 @@ function FirstPage() {
     <div id="body">
       {/* -------------------------- */}
       <header id="encabezado">
-        <img src={logoOne} id="logo" />
+        <img src={logoOne} id="logo"/>
         <h2 id="tituloE">Konecta</h2>
         <div id="contenedorEnlaces">
           <a href="" className="enlaces">
@@ -37,8 +38,10 @@ function FirstPage() {
           oportunidades en empresas líderes. Nuestra plataforma intuitiva te
           permite crear y enviar tu currículum de manera rápida y sencilla.
         </p>
-        <button className="botones">Buscar Empleo</button>
-        <button className="botones">Gestion de Empleos</button>
+        {/* <button className="botones">Buscar Empleo</button>
+        <button className="botones">Gestion de Empleos</button> */}
+        <a className= "botones" href="">Buscar Empleos</a>
+        <a className= "botones" href="/PagLogin">Gestion de Empleos</a>
       </div>
       <div id="segundoElemento">
         <img src={KonectaCompany} id="companyLogo" />

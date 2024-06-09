@@ -41,7 +41,7 @@ function FirstPage() {
         {/* <button className="botones">Buscar Empleo</button>
         <button className="botones">Gestion de Empleos</button> */}
         <a className= "botones" href="">Buscar Empleos</a>
-        <a className= "botones" href="/PagLogin">Gestion de Empleos</a>
+        <a className= "botones" href="/Login">Gestion de Empleos</a>
       </div>
       <div id="segundoElemento">
         <img src={KonectaCompany} id="companyLogo" />

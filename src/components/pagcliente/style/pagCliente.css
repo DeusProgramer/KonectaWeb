@@ -1,0 +1,61 @@
+#bodyCliente
+{
+    display: flex ;
+}
+#barraLateral
+{
+    background-image: linear-gradient(to bottom, #ebe0e0, #617eff);
+    padding: 15px;
+    width:25vh;
+    height:100vh;
+    position: fixed;
+    display:flex;
+}
+
+#tituloKonectas
+{
+    display: flex;
+    position: relative;
+    top: -15px;
+    color: rgb(22, 22, 65);
+}
+
+#imagenLogoKonecta
+{
+    height: 45px;
+}
+
+#panelCentral
+{
+    background-image: url(./backgroundCliente.jpg);
+    display: flex;
+    margin-left: 160px;
+    height: 100vh;
+    width: 180vh;
+    justify-content: center;
+}
+
+#multimax
+{
+    height:250px;
+    position: relative;
+    width: min-content;
+    top: -80px;
+    left: 40px;
+}
+
+#panel
+{
+    background-color: rgba(19, 19, 19, 0.178);
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(240, 248, 255, 0.205);
+    border-radius: 15px;
+    width: 990px;
+    margin-top: 7.5%;
+    margin-left: -190px;
+    padding: 15px;
+
+}
+

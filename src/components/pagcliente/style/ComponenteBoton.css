@@ -2,3 +2,15 @@ button{
     margin: 5px;
     font-size:small;
 }
+.div_central
+{
+    background-color: aqua;
+    padding: 15px;
+    width: 1005px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    color: aliceblue;
+}

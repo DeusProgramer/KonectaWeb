@@ -4,6 +4,7 @@ import logoOne from "../img/logoOne.png";
 import ComponenteBoton from "./ComponenteBoton";
 
 function PagCliente() {
+  const [infoEmpresa, setInfoEmpresa] = useState([]);
   const [nombresChambas, setNombresChambas] = useState([]);
   const [descripcionChambas, setDescripcionChambas] = useState([]);
   const [requisitosChambas, setRequisitosChambas] = useState([]);
@@ -12,6 +13,10 @@ function PagCliente() {
   const [indexComponente, setIndexComponente] = useState(0);
 
   var indexx = 0;
+
+  const cambiarValorInfoEmpresa = (arrays) => {
+    setInfoEmpresa(arrays);
+  };
 
   const cambiarValorNombresChambas = (arrays) => {
     setNombresChambas(arrays);
@@ -67,6 +72,7 @@ function PagCliente() {
         cambiarValorDescripcionChambas(data.descripcion);
         cambiarValorRequisitosChambas(data.Requisitos);
         cambiarValorIdChambas(data.id);
+        cambiarValorInfoEmpresa(data.info)
         cambiarValorPermisoEjecutarFuncion(false);
       })
       .catch((error) => {
@@ -76,6 +82,8 @@ function PagCliente() {
 
   if (permisoEjecutarFuncion === true) {
     getDatosChambasApi();
+  }else{
+    console.log(infoEmpresa)
   }
 
   return (

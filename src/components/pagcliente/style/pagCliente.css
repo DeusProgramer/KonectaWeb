@@ -18,8 +18,9 @@
 #CampoCentral
 {
     background-color: #19222c;
-    height: 100vh;
+    box-sizing: border-box;
     width:100vmax;
+    padding-bottom: 12%;
     padding-left: 250px;
 }
 

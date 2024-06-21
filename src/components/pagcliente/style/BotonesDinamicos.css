@@ -9,3 +9,12 @@
     top: 25px;
     left: 320px;
 }
+#divBotones
+{
+    display: flex;
+    flex-direction: column;
+}
+#divBotones button{
+    margin-bottom: 25px;
+    text-align: left;
+}

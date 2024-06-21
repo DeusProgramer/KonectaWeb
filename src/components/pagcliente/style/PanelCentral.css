@@ -1,33 +1,85 @@
-.panel
-{
-    display: flex;
-    position: absolute;
-    background-color: rgb(240, 248, 255);
-    width: 1005px;
-    height: 600px;
-    border-radius: 15px;
-    top: 25px;   
-    z-index: 1000; /* Z-index alto para estar encima de otros elementos */
-    color: black;
-    padding-left: 50px;
-    padding-top: 15px;
-    flex-direction: column;
+.panel {
+  display: flex;
+  position: absolute;
+  background-color: rgb(240, 248, 255);
+  width: 1005px;
+  height: 1400px;
+  border-radius: 15px;
+  top: 25px;
+  z-index: 1000; /* Z-index alto para estar encima de otros elementos */
+  color: black;
+  padding-left: 30px;
+  padding-top: 15px;
+  flex-direction: column;
 }
-#salir
-{
-    margin-left: 950px;
+#salir {
+  margin-left: 980px;
 }
-#salir:hover{
-    background-color: red;
+#salir:hover {
+  background-color: red;
 }
 #infoPersonal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px; /* Espacio entre los elementos */
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 930px;
+}
+
+#infoPersonal p {
+  background-color: rgb(
+    230,
+    239,
+    247
+  ); /* Color de fondo para mejor visualización */
+  padding: 5px; /* Espacio interno */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el estilo */
+}
+
+#infoAcademica {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px; /* Espacio entre los elementos */
+  margin-top: 50px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 930px;
+}
+
+#infoAcademica p {
+  background-color: rgb(
+    230,
+    239,
+    247
+  ); /* Color de fondo para mejor visualización */
+  padding: 5px; /* Espacio interno */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el estilo */
+}
+
+#infoLaboral {
     display: grid;
-    grid-template-columns: repeat(10, 5fr);
-    gap: 1px; /* Espacio entre los elementos */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; /* Espacio entre los elementos */
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 930px;
   }
   
-  #infoPersonal p {
-    background-color: rgb(230, 239, 247); /* Color de fondo para mejor visualización */
-    padding: 10px; /* Espacio interno */
+  #infoLaboral p {
+    background-color: rgb(
+      230,
+      239,
+      247
+    ); /* Color de fondo para mejor visualización */
+    padding: 5px; /* Espacio interno */
     border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el estilo */}
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para el estilo */
+  }
+  

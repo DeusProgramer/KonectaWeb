@@ -197,6 +197,9 @@ function PagCliente() {
   if (permisoEjecutarFuncion === true) {
     getDatosChambasApi();
   }
+  else{
+    console.log(titulo)
+  }
 
   function intentar(){
     try {
@@ -241,6 +244,25 @@ function PagCliente() {
           descripcionDelTrabajo={descripcionChambas}
           index={indexComponente}
           nombre={intentar()}
+          cedula={cedulaID}
+          nacionalidad={nacionalidad}
+          EstadoCivil={estadoCivil}
+          Email = {email}
+          Nacimiento={nacimiento}
+          NumeroTf={numeroTf}
+          Direccion={direccion}
+          Profesion={profesion}
+          Titulo={titulo}
+          ColeUni={cole_uni}
+          cursos={cursos}
+          DuracionCurso = {duracionCurso}
+          InstiCurso = {instiCurso}
+          CargoAntiTrabajo = {cargoAntiTrabajo}
+          DuracionTrabajoAnti = {duracionTrabajoAnti}
+          SitioTrabajoAnti = {sitioTrabajoAnti}
+          Discapacidad = {discapacidad}
+          Disponibilidad = {disponibilidad}
+          CargoKonecta = {cargoKonecta}
         />
       </section>
     </div>

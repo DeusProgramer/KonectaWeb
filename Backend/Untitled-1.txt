@@ -1,0 +1,80 @@
+-- database: c:\Users\Administrator\Documents\Programacion\Web\Konecta\Backend\AASSDD.db
+-- Presione el botón ▷ en la esquina superior derecha de la ventana para ejecutar todo el archivo.
+SELECT
+    *
+FROM
+    clientes
+ORDER BY
+    `id` ASC;
+
+INSERT INTO
+    clientes (
+        nombreEmpresa,
+        contrasenaEmpresa,
+        gmailEmpresa,
+        direccionEmpresa,
+        numeroEmpresa
+    )
+VALUES
+    (
+        "MRW",
+        "123456789",
+        "mwr.konect@gamil.com",
+        " Monagas, Punto Fijo 4102, Falcón, Venezuela",
+        "0424-XXX-XXXX"
+    );
+
+SELECT
+    *
+from
+    clientes
+where
+    gmailEmpresa = "mwr.konect@gmail.com"
+    and contrasenaEmpresa = '123456789';
+
+insert into
+    aspirantes (
+        nombresApellidos,
+        cudulaID,
+        nacionalidad,
+        estadoCivil,
+        fechaNatalicio,
+        numeroTelefono,
+        emailPersonal,
+        direccion,
+        profesion,
+        titulo,
+        institucion,
+        cursos,
+        duracionCurso,
+        institucionCurso,
+        CargoDesempenado,
+        añosDesempenado,
+        institucionDesempenado,
+        discapacidad,
+        disponibilidad,
+        cargoKonecta
+    )
+values
+    (
+        "Yonnier Eduardo Gutierrez Garcia",
+        "28687693",
+        "Venezolano",
+        "Soltero",
+        "12/07/2002",
+        "0425656565",
+        "gutiyon200@gmail.com",
+        "Azaro",
+        "NINGUNA",
+        "Bachiller",
+        "U.E Fe y Alegria",
+        "Ninguno",
+        "Ninguno",
+        "Ninguno",
+        "Ninguno",
+        "Ninguno",
+        "Ninguno",
+        "Ninguno",
+        "Inmediata",
+        "Supervisor de Almacen"
+    )

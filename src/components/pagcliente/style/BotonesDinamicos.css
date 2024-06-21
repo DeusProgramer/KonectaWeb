@@ -1,0 +1,11 @@
+#Master
+{
+    display: grid;
+}
+#salir
+{
+    position: absolute;
+    display: flex;
+    top: 25px;
+    left: 320px;
+}

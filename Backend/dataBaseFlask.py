@@ -6,6 +6,10 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime
+import google.generativeai as genai
+import textwrap
+from IPython.display import Markdown
+import sys
 from flask_cors import CORS
 
 
@@ -38,6 +42,8 @@ class DataBaseFlask:
         self.aspirantesDiscapacidad = {}
         self.aspirantesDisponibilidad = {}
         self.aspirantesCargoKonecta = {}
+
+        
         
         @self.app.route("/enviarCorreo", methods = ['POST'])
         def CorreoBD():
@@ -135,8 +141,6 @@ class DataBaseFlask:
                 print(f'Error al enviar el correo: {str(e)}')
                 return jsonify({"variable":False})
             
-
-
         @self.app.route("/enviar", methods = ['POST'] )
         def recibir():
             data = request.get_json()
@@ -149,7 +153,6 @@ class DataBaseFlask:
             else:
                 return jsonify({'trueOrFalse' : False})
     
-
         @self.app.route("/cargosBaseDatos", methods = ['POST'])
         def hola():
             DataBaseFlask.extraerDatos(self)
@@ -218,8 +221,7 @@ class DataBaseFlask:
             return jsonify({
                 'variable': None
             })        
-
-        
+   
     def crearBaseDatos(self):
         conn = sqlite3.connect("AASSDD.db")
         query = "create table if not exists mwr (nombresCargos TEXT, descripcion TEXT, requisitos TEXT)"
@@ -235,6 +237,16 @@ class DataBaseFlask:
         conn.execute(query3)
         conn.commit()
         conn.close()
+
+    def iaAsistans(self):
+        sys.stdout.reconfigure(encoding= 'utf-8')
+        modelo = genai.GenerativeModel('gemini-pro')
+        GEMINI_API_KEY = 'AIzaSyBDyArO_dD8LjdvDHsh6QfByyC2oUWq0V0'
+        genai.configure(api_key= GEMINI_API_KEY)
+        respuesta = modelo.generate_content(f"hola como estas???")
+        respuesta = respuesta.text
+
+        print(respuesta)
 
     def VerificacionEmpresa(self ,gmailEmpresa, contrasenaEmpresa):
         conn = sqlite3.connect("AASSDD.db")
@@ -271,8 +283,6 @@ class DataBaseFlask:
                 self.id[i] = resultado1[i][3]
                 i = i + 1
 
-            
-
     def guardarAspirantes(self, nombreApellido, ci, nacionalidad, estCivil, nacimiento, numTelef, email, direccion, profesion, 
                           titulo, cole_uni, curso, duracionCurso, instiCurso, antiguaChamba, añosChamba, lugarChamba, discapacidad, 
                           disponibilidad, cargoKonecta):
@@ -297,5 +307,6 @@ if __name__ == '__main__':
     #                      "Unefa", "Contaduria", "2 años", "Iutirla", "Administradora", "1", "INEA", "Ninguna", 
     #                      "Inmediata", "Supervisor de Almacen")
     gg.crearBaseDatos()
+    gg.iaAsistans()
     gg.app.run(debug=True, port=5002)
 

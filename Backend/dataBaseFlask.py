@@ -2,6 +2,10 @@ import sqlite3
 from flask import Flask
 from flask import jsonify
 from flask import request
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from datetime import datetime
 from flask_cors import CORS
 
 
@@ -35,6 +39,103 @@ class DataBaseFlask:
         self.aspirantesDisponibilidad = {}
         self.aspirantesCargoKonecta = {}
         
+        @self.app.route("/enviarCorreo", methods = ['POST'])
+        def CorreoBD():
+            data = request.get_json()
+            correo = data.get('correo')
+            # Configuración de los parámetros del correo
+            smtp_server = "smtp.gmail.com"  # Reemplaza con tu servidor SMTP
+            smtp_port = 587  # Puerto para TLS/STARTTLS
+            smtp_username = 'konectacompany@gmail.com'  # Tu dirección de correo
+            smtp_password = 'stadonexkekcfnss'  # Tu contraseña de correo
+
+            # Crear instancia del mensaje
+            msg = MIMEMultipart()
+
+            # Configurar los parámetros del mensaje
+            msg['From'] = smtp_username
+            msg['To'] = correo
+            msg['Subject'] = 'Confirmación de entrevista de trabajo'
+
+            # Crear contenido HTML del mensaje
+            html = f"""
+    <html>
+      <head>
+        <style>
+          body {{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+          }}
+          .container {{
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }}
+          .header {{
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+          }}
+          .content {{
+            font-size: 16px;
+            color: #555555;
+            line-height: 1.6;
+          }}
+          .footer {{
+            font-size: 14px;
+            color: #888888;
+            text-align: center;
+            margin-top: 20px;
+          }}
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">¡Felicidades!</div>
+          <div class="content">
+            <p>Has sido seleccionado para una entrevista de trabajo.</p>
+            <p><strong>Fecha de la entrevista:</strong></p>
+            <p>Te esperamos.</p>
+          </div>
+          <div class="footer">
+            <p>Gracias por tu interés en formar parte de nuestra empresa.</p>
+          </div>
+        </div>
+      </body>
+    </html>
+    """
+
+            # Adjuntar el contenido HTML al mensaje
+            msg.attach(MIMEText(html, 'html'))
+
+            try:
+                # Crear una conexión segura con el servidor SMTP
+                server = smtplib.SMTP(smtp_server, smtp_port)
+                server.starttls()  # Iniciar conexión TLS/STARTTLS
+
+                # Iniciar sesión en el servidor SMTP
+                server.login(smtp_username, smtp_password)
+
+                # Enviar correo electrónico
+                server.sendmail(smtp_username, correo, msg.as_string())
+
+                # Terminar la conexión con el servidor SMTP
+                server.quit()
+
+                print(f'Correo enviado a {correo} correctamente!')
+                return jsonify({"variable":True})
+            except Exception as e:
+                print(f'Error al enviar el correo: {str(e)}')
+                return jsonify({"variable":False})
+            
+
 
         @self.app.route("/enviar", methods = ['POST'] )
         def recibir():

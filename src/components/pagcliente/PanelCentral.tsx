@@ -52,8 +52,29 @@ export const PanelCentral = (props: PanelCentral) => {
     CargoKonecta,
   } = props;
 
+  const [valor, setValor] = useState(false);
+  function enviarCorreo(email) {
+    const json = { correo: email };
+    fetch("http://127.0.0.1:5002/enviarCorreo", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(json),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.variable) {
+          alert("se envio");
+        } else {
+          alert("error no se envio");
+        }
+      })
+      .catch((error) => {
+        document.write("error al recibir datos de la api, nombresChambas\n");
+      });
+  }
+
   if (boleano === true) {
-    console.log(cedula[nombreIndex])
+    console.log(cedula[nombreIndex]);
     return (
       <div className="panel">
         <h2>Datos del Aspirante</h2>
@@ -77,11 +98,14 @@ export const PanelCentral = (props: PanelCentral) => {
         </div>
         <div id="infoLaboral">
           <p>Cargo en el Trabajo Anterior: {CargoAntiTrabajo[nombreIndex]}</p>
-          <p>Duración del Trabajo Anterior: {DuracionTrabajoAnti[nombreIndex]}</p>
+          <p>
+            Duración del Trabajo Anterior: {DuracionTrabajoAnti[nombreIndex]}
+          </p>
           <p>Sitio del Trabajo Anterior: {SitioTrabajoAnti[nombreIndex]}</p>
           <p>Discapacidad: {Discapacidad[nombreIndex]}</p>
           <p>Disponibilidad: {Disponibilidad[nombreIndex]}</p>
         </div>
+        <button onClick={() => enviarCorreo(Email[nombreIndex])}>Enviar Solicitud de Empleo</button>
       </div>
     );
   }

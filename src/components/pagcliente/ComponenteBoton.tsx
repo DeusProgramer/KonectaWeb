@@ -61,11 +61,15 @@ function ComponenteBoton(props: ComponenteBoton) {
     console.log(Cursos)
     return (
       <div className="div_central">
+
         <h1>{nombreDelTrabajo[0]}</h1>
         <hr />
+        <h2>Descripcion:</h2>
         <p>{descripcionDelTrabajo[0]}</p>
         <hr />
+        <h2>Requisitos:</h2>
         <p>{requisitosTrabajo[0]}</p>
+        <h2>Apirantes al Trabajo:</h2>
         <BotonesDinamicos
           nombre={nombre}
           cedula={cedula}
@@ -94,10 +98,11 @@ function ComponenteBoton(props: ComponenteBoton) {
     return (
       <div className="div_central">
         <h1>{nombreDelTrabajo[1]}</h1>
-        <hr />
+        <h2>Descripcion:</h2>
         <p>{descripcionDelTrabajo[1]}</p>
-        <hr />
+        <h2>Requisitos:</h2>
         <p>{requisitosTrabajo[1]}</p>
+        <h2>Apirantes al Trabajo:</h2>
         <BotonesDinamicos
           nombre={nombre}
           cedula={cedula}
@@ -127,9 +132,12 @@ function ComponenteBoton(props: ComponenteBoton) {
       <div className="div_central">
         <h1>{nombreDelTrabajo[2]}</h1>
         <hr />
+        <h2>Descripcion:</h2>
         <p>{descripcionDelTrabajo[2]}</p>
         <hr />
+        <h2>Requisitos:</h2>
         <p>{requisitosTrabajo[2]}</p>
+        <h2>Apirantes al Trabajo:</h2>
         <BotonesDinamicos
           nombre={nombre}
           cedula={cedula}
@@ -160,9 +168,12 @@ function ComponenteBoton(props: ComponenteBoton) {
       <div className="div_central">
         <h1>{nombreDelTrabajo[3]}</h1>
         <hr />
+        <h2>Descripcion:</h2>
         <p>{descripcionDelTrabajo[3]}</p>
         <hr />
+        <h2>Requisitos:</h2>
         <p>{requisitosTrabajo[3]}</p>
+        <h2>Apirantes al Trabajo:</h2>
         <BotonesDinamicos
           nombre={nombre}
           cedula={cedula}
@@ -192,9 +203,12 @@ function ComponenteBoton(props: ComponenteBoton) {
       <div className="div_central">
         <h1>{nombreDelTrabajo[4]}</h1>
         <hr />
+        <h2>Descripcion:</h2>
         <p>{descripcionDelTrabajo[4]}</p>
         <hr />
+        <h2>Requisitos:</h2>
         <p>{requisitosTrabajo[4]}</p>
+        <h2>Apirantes al Trabajo:</h2>
         <BotonesDinamicos
           nombre={nombre}
           cedula={cedula}
@@ -224,9 +238,12 @@ function ComponenteBoton(props: ComponenteBoton) {
       <div className="div_central">
         <h1>{nombreDelTrabajo[5]}</h1>
         <hr />
+        <h2>Descripcion:</h2>
         <p>{descripcionDelTrabajo[5]}</p>
         <hr />
+        <h2>Requisitos:</h2>
         <p>{requisitosTrabajo[5]}</p>
+        <h2>Apirantes al Trabajo:</h2>
         <BotonesDinamicos
           nombre={nombre}
           cedula={cedula}
